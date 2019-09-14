@@ -1,10 +1,8 @@
-## XXXXXX - JS Toy Problem
+## Calendar Availability
+####JS Toy Problem
 
-**XXXXXX Problem Description:**
-
-
-
-##
+Merge all team calendars to determine times that
+are available for all teams.
 
 --
 ### CODE TESTING:
@@ -14,13 +12,3 @@
 or
 
 ```mocha ./node_modules/mocha/bin/mocha```
-
-
-
----
-#### REFERENCE:
-- https://www.sitepoint.com/unit-test-javascript-mocha-chai/
-
-- https://blog.logrocket.com/a-quick-and-complete-guide-to-mocha-testing-d0e0ea09f09d/
-
-- https://mochajs.org/#getting-started

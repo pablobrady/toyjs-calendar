@@ -1,26 +1,29 @@
 /* ./test/index.js */
 
-/* Answer Key */
-const answerKey = [0, 1, 2];
-
 var solved = require('../solved');
 var chai = require('chai'); // Only required for headless testing - "> mocha"
 var assert = chai.assert;
 
-describe('Answer Key Validation', function() {
-  it('answer key has a .length of XX', function() {;
-    assert.equal(answerKey.length, 3);
+describe('Test Dataset #1', function() {
+
+  var meetings = [
+    {startTime: 0, endTime: 1},
+    {startTime: 3, endTime: 5},
+    {startTime: 4, endTime: 8},
+    {startTime: 10, endTime: 12},
+    {startTime: 9, endTime: 10},
+  ];
+  console.log(`Meetings:\n`, meetings, `...\nMerges down to...\n`, solved( meetings ), `\n\n` )
+
+  var mergedOutput = solved( meetings );
+
+  it('The Merged Calendar has a .length of 3', function() {;
+    assert.equal(mergedOutput.length, 3);
   });
-  it('last answer key elements is 2', function() {
-    var answerKeyLastItem = answerKey[answerKey.length-1];
-    assert.equal(answerKeyLastItem, 2);
+  it('The last merged entry is 10 to 12', function() {
+    var startTime = mergedOutput[2].startTime;
+    var endTime   = mergedOutput[2].endTime;
+    assert.equal(startTime, 10);
+    assert.equal(endTime, 12);
   });
 });
-
-describe('Computed Answer Validation', function() {
-  var output = -1 // solved(n)
-  it('output is -1', function() {
-    assert.equal(output, -1);
-  });
-});
-
